@@ -217,37 +217,233 @@
     </section>
     <section class="sucursales">
         <div class="container">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-galerias" role="tab" aria-controls="pills-home" aria-selected="true">Galerías Mérida</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-altabrisa" role="tab" aria-controls="pills-profile" aria-selected="false">Plaza Altabrisa</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-fiesta" role="tab" aria-controls="pills-contact" aria-selected="false">Plaza Fiesta</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-colon" role="tab" aria-controls="pills-contact" aria-selected="false">Centro Colón</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-centro" role="tab" aria-controls="pills-contact" aria-selected="false">Centro 59</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-mexico-tab" data-toggle="pill" href="#pills-mexico" role="tab" aria-controls="pills-contact" aria-selected="false">Centro 59</a>
-                </li>
-              </ul>
-              <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-galerias" role="tabpanel" aria-labelledby="pills-galerias-tab"><h1>1</h1></div>
-                <div class="tab-pane fade" id="pills-altabrisa" role="tabpanel" aria-labelledby="pills-altabrisa-tab"><h1>2</h1></div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-fiesta-tab"><h1>3</h1></div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-colon-tab"><h1>4</h1></div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-centro-tab"><h1>5</h1></div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-mexico-tab"><h1>6</h1></div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-centro-tab"><h1>7</h1></div>
-              </div>
+            <div class="posicion">
+                <div class="titular">
+                    <h1 class="text-center">SELECCIONA TU SUCURSAL <br> MÁS CERCANA</h1>
+                </div>
+                <div class="posicion__tabs">
+                    <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item mt-2" role="presentation">
+                          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-galerias" role="tab" aria-controls="pills-home" aria-selected="true">Galerías Mérida</a>
+                        </li>
+                        <li class="nav-item mt-2" role="presentation">
+                          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-altabrisa" role="tab" aria-controls="pills-profile" aria-selected="false">Plaza Altabrisa</a>
+                        </li>
+                        <li class="nav-item mt-2" role="presentation">
+                          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-fiesta" role="tab" aria-controls="pills-contact" aria-selected="false">Plaza Fiesta</a>
+                        </li>
+                        <li class="nav-item mt-2" role="presentation">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-colon" role="tab" aria-controls="pills-contact" aria-selected="false">Centro Colón</a>
+                        </li>
+                        <li class="nav-item mt-2" role="presentation">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-centro" role="tab" aria-controls="pills-contact" aria-selected="false">Centro 59</a>
+                        </li>
+                        <li class="nav-item mt-2" role="presentation">
+                            <a class="nav-link" id="pills-mexico-tab" data-toggle="pill" href="#pills-mexico" role="tab" aria-controls="pills-contact" aria-selected="false">Colonia México</a>
+                        </li>
+                    </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-galerias" role="tabpanel" aria-labelledby="pills-galerias-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="google-maps">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 inf-sucursal m-auto">
+                                    <h1 class="text-right pt-2">GALERÍAS MÉRIDA</h1> <br>
+                                    <div class="text-right">
+                                        <p style="color:rgb(100, 100, 100);">GALERÍAS MÉRIDA, MÓDULO 26, PLANTA ALTA. CALLE 3 Nº 300 X 24 Y 60, COL. UNIDAD HABITACIONAL REVOLUCIÓN CORDEMEX MÉRIDA, YUCATÁN, MÉXICO. C.P. 97111</p>
+                                        <p>
+                                           <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <span class="tel">TEL</span><br>
+                                                <span class="izquierda horario">HORARIO:</span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 ">
+                                                <span class="derecha tele">(999) 218 3602</span> <br>
+                                                <span class="derecha tele">TODOS LOS DÍAS DE 10:00 AM A 9:00 PM</span>
+                                            </div>
+                                           </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-altabrisa" role="tabpanel" aria-labelledby="pills-altabrisa-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="google-maps">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 inf-sucursal m-auto">
+                                    <h1 class="text-right pt-2">PLAZA ALTABRISA</h1> <br>
+                                    <div class="text-right">
+                                        <p style="color:rgb(100, 100, 100);">GALERÍAS MÉRIDA, MÓDULO 26, PLANTA ALTA. CALLE 3 Nº 300 X 24 Y 60, COL. UNIDAD HABITACIONAL REVOLUCIÓN CORDEMEX MÉRIDA, YUCATÁN, MÉXICO. C.P. 97111</p>
+                                        <p>
+                                           <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <span class="tel">TEL</span><br>
+                                                <span class="izquierda horario">HORARIO:</span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 ">
+                                                <span class="derecha tele">(999) 218 3602</span> <br>
+                                                <span class="derecha tele">TODOS LOS DÍAS DE 10:00 AM A 9:00 PM</span>
+                                            </div>
+                                           </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-fiesta" role="tabpanel" aria-labelledby="pills-fiesta-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="google-maps">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 inf-sucursal m-auto">
+                                    <h1 class="text-right pt-2">PLAZA FIESTA</h1> <br>
+                                    <div class="text-right">
+                                        <p style="color:rgb(100, 100, 100);">GALERÍAS MÉRIDA, MÓDULO 26, PLANTA ALTA. CALLE 3 Nº 300 X 24 Y 60, COL. UNIDAD HABITACIONAL REVOLUCIÓN CORDEMEX MÉRIDA, YUCATÁN, MÉXICO. C.P. 97111</p>
+                                        <p>
+                                           <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <span class="tel">TEL</span><br>
+                                                <span class="izquierda horario">HORARIO:</span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 ">
+                                                <span class="derecha tele">(999) 218 3602</span> <br>
+                                                <span class="derecha tele">TODOS LOS DÍAS DE 10:00 AM A 9:00 PM</span>
+                                            </div>
+                                           </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-colon" role="tabpanel" aria-labelledby="pills-colon-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="google-maps">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 inf-sucursal m-auto">
+                                    <h1 class="text-right pt-2">CENTRO COLÓN</h1> <br>
+                                    <div class="text-right">
+                                        <p style="color:rgb(100, 100, 100);">GALERÍAS MÉRIDA, MÓDULO 26, PLANTA ALTA. CALLE 3 Nº 300 X 24 Y 60, COL. UNIDAD HABITACIONAL REVOLUCIÓN CORDEMEX MÉRIDA, YUCATÁN, MÉXICO. C.P. 97111</p>
+                                        <p>
+                                           <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <span class="tel">TEL</span><br>
+                                                <span class="izquierda horario">HORARIO:</span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 ">
+                                                <span class="derecha tele">(999) 218 3602</span> <br>
+                                                <span class="derecha tele">TODOS LOS DÍAS DE 10:00 AM A 9:00 PM</span>
+                                            </div>
+                                           </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-centro" role="tabpanel" aria-labelledby="pills-centro-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="google-maps">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 inf-sucursal m-auto">
+                                    <h1 class="text-right pt-2">CENTRO 59</h1> <br>
+                                    <div class="text-right">
+                                        <p style="color:rgb(100, 100, 100);">GALERÍAS MÉRIDA, MÓDULO 26, PLANTA ALTA. CALLE 3 Nº 300 X 24 Y 60, COL. UNIDAD HABITACIONAL REVOLUCIÓN CORDEMEX MÉRIDA, YUCATÁN, MÉXICO. C.P. 97111</p>
+                                        <p>
+                                           <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <span class="tel">TEL</span><br>
+                                                <span class="izquierda horario">HORARIO:</span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 ">
+                                                <span class="derecha tele">(999) 218 3602</span> <br>
+                                                <span class="derecha tele">TODOS LOS DÍAS DE 10:00 AM A 9:00 PM</span>
+                                            </div>
+                                           </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-mexico" role="tabpanel" aria-labelledby="pills-mexico-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="google-maps">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 inf-sucursal m-auto">
+                                    <h1 class="text-right pt-2">COLONIA MÉXICO</h1> <br>
+                                    <div class="text-right">
+                                        <p style="color:rgb(100, 100, 100);">GALERÍAS MÉRIDA, MÓDULO 26, PLANTA ALTA. CALLE 3 Nº 300 X 24 Y 60, COL. UNIDAD HABITACIONAL REVOLUCIÓN CORDEMEX MÉRIDA, YUCATÁN, MÉXICO. C.P. 97111</p>
+                                        <p>
+                                           <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <span class="tel">TEL</span><br>
+                                                <span class="izquierda horario">HORARIO:</span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-12 ">
+                                                <span class="derecha tele">(999) 218 3602</span> <br>
+                                                <span class="derecha tele">TODOS LOS DÍAS DE 10:00 AM A 9:00 PM</span>
+                                            </div>
+                                           </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
         </div>
     </section>
-
+    <section class="contacto">
+        <div class="container">
+            <div class="row" id="contacto">
+                <div class="col-md-12 titular">
+                    <h1 class="titulares text-center">CONTÁCTANOS</h1> <br>
+                </div>
+                <div class="col-lg-12 col-lg-offset-2 p-3">
+                    <form name="sentMessage" id="contactForm" novalidate="">
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 col-md-6  controls">
+    
+                                <input type="text" class="form-control" placeholder="NOMBRE" id="name" required="" data-validation-required-message="Please enter your name." style="color: #f2f2f2;">
+                                <p class="help-block text-danger"></p> <br>
+    
+                                <input type="email" class="form-control" placeholder="CORREO" id="email" required="" data-validation-required-message="Please enter your email address." style="color: #f2f2f2;">
+                                <p class="help-block text-danger"></p> <br>
+    
+                                <input type="tel" class="form-control" placeholder="TELÉFONO" id="phone" required="" data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+    
+                            </div>
+    
+                            <div class="form-group col-md-6  controls">
+                                <textarea rows="7" class="form-control" placeholder="ASUNTO" id="message" required="" data-validation-required-message="Please enter a message." style="color: #f2f2f2;"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success  btn-enviar">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 @endsection
