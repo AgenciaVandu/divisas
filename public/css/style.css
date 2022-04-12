@@ -9,6 +9,17 @@ header > video {
     width: 100%;
     background-color: #fbfcfc;
 }
+.bg-divisas {
+    background-color: transparent;
+    transition: 0.5s ease;
+    } @media (max-width: 999px) {
+        .bg-kanan {
+            background-color: #2FA7FD; 
+        }
+    }
+    .bg-divisas.scrolled {
+        background: #2FA7FD;
+    } 
 .nav-item {
     margin-right: 1.8em;
 }
