@@ -1,5 +1,6 @@
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 .bg-divisas {
     background-color: transparent;
@@ -30,6 +31,7 @@ header > video {
 table {
     font-size: 1.5em;
 }
+
 .table-active {
     background: #fafafa;
 }
@@ -61,7 +63,9 @@ small {
     font-size: 1em;
     color: rgb(182, 182, 182);
 }
-
+.servicios {
+    margin-top: 3em;
+}
 .servicios-lista {
     padding-right: 10em;
     padding-left: 10em;
@@ -78,7 +82,7 @@ small {
     letter-spacing: 4px;
 }
 .servicios-lista p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: rgb(100, 100, 100);
 }
 .banners {
@@ -110,6 +114,7 @@ small {
     text-align: right;
     color: rgb(134, 134, 134);
     font-weight: 400;
+    line-height: 1.7em;
 }
 
 .form-control {
@@ -130,12 +135,12 @@ small {
 
 .btn-success {
     background-color: #2FA7FD;
-    padding: .8em 3.2em .8em 3.2em;
+    padding: .4em 8em .4em 8em;
     color: #fff;
     font-weight: 600;
     font-size: 2em;
     border: none;
-    border-radius: 1em;
+    border-radius: .5em;
 }
 
 .btn-success:hover {

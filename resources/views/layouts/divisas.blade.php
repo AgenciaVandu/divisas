@@ -10,7 +10,55 @@
     <script src="https://kit.fontawesome.com/9111dc1fca.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-divisas fixed-top pt-2">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/img/logopng.png" class="img-fluid" alt="Divisas sureste">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#tipo-de-cambio">Tipo de cambio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sucursales">Sucursales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/divisasureste" target="blank_">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/divisa.sureste/" target="blank_">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UC5X-Yf-E8IoYDn8dDlDqrEg" target="blank_">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://api.whatsapp.com/send/?phone=5219991729399&text&app_absent=0" target="blank_">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </nav>
     @yield('content')
 
 
