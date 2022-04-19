@@ -51,36 +51,25 @@
                                 <tbody>
                                     <tr>
                                         <th class="table-active" style="color: gray;" scope="row">DIVISAS</th>
-                                        <td class="table-active">Dólares</td>
-                                        <td class="table-active">Euros</td>
-                                        <td class="table-active">Canadá</td>
-                                        <td class="table-active">Libra</td>
-                                        <td class="table-active">Suizo</td>
-                                        <td class="table-active">Belice</td>
-                                        <td class="table-active">Oro</td>
-                                        <td class="table-active">Plata</td>
+                                        @foreach ($divisas as $divisa)
+                                            <td class="table-active">{{ $divisa->name }}</td>
+                                        @endforeach
                                     </tr>
                                     <tr>
                                         <th style="color: gray;" scope="row">COMPRA</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
-                                        <td>@mdo</td>
+                                        @foreach ($divisas as $divisa)
+                                            <td>
+                                                    ${{ number_format($divisa->compra, 2) }}
+                                            </td>
+                                        @endforeach
                                     </tr>
                                     <tr>
                                         <th class="table-active" style="color: gray;" scope="row">VENTA</th>
-                                        <td class="table-active">Larry</td>
-                                        <td class="table-active">the Bird</td>
-                                        <td class="table-active">@twitter</td>
-                                        <td class="table-active">@mdo</td>
-                                        <td class="table-active">@mdo</td>
-                                        <td class="table-active">@mdo</td>
-                                        <td class="table-active">@mdo</td>
-                                        <td class="table-active">@mdo</td>
+                                        @foreach ($divisas as $divisa)
+                                            <td class="table-active">
+                                                $  {{ number_format($divisa->venta,2) }}
+                                            </td>
+                                        @endforeach
                                     </tr>
                                 </tbody>
                             </table>

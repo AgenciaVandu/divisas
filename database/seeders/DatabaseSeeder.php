@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'dev@agenciavandu.com',
             'password' => Hash::make('marencos6359:D'),
         ]);
+        $this->call(DivisaSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }
