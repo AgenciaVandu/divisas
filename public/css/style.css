@@ -1,0 +1,166 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+.bg-divisas {
+    background-color: transparent;
+}
+header > video {
+    width: 100%;
+    background-color: #fbfcfc;
+}
+.bg-divisas {
+    background-color: transparent;
+    transition: 0.5s ease;
+    } @media (max-width: 999px) {
+        .bg-kanan {
+            background-color: #2FA7FD; 
+        }
+    }
+    .bg-divisas.scrolled {
+        background: #2FA7FD;
+    } 
+.nav-item {
+    margin-right: 1.8em;
+}
+.nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+.nav-link:hover {
+    color: yellow !important;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 0px 5px 1px rgba(133, 133, 133, 0.2);
+}
+table {
+    font-size: 1.5em;
+}
+
+.table-active {
+    background: #fafafa;
+}
+
+table th, table td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    margin: auto;
+}
+
+.titular {
+    text-align: center;
+    padding-top: 3em;
+}
+.titular > h1 {
+    font-size: 3em;
+    color: rgb(100, 100, 100);
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+.divisas {
+    padding: 1em 8em 0 8em;
+} @media (max-width:1195px) {
+    .divisas {
+        padding: 1em 0em 0 0em;
+    }
+}
+small {
+    font-size: 1em;
+    color: rgb(182, 182, 182);
+}
+.servicios {
+    margin-top: 3em;
+}
+.servicios-lista {
+    padding-right: 10em;
+    padding-left: 10em;
+} @media (max-width:1195px) {
+    .servicios-lista {
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+}
+.servicios-lista h1 {
+    font-size: 3em;
+    color: rgb(100, 100, 100);
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+.servicios-lista p {
+    font-size: 1.3em;
+    color: rgb(100, 100, 100);
+}
+.banners {
+    background-color: #2FA7FD;
+    background-position: center;
+}
+
+.sucursales .nav-link {
+    background-color: #2FA7FD;
+}
+
+.sucursales .nav-link.active {
+    background-color: yellow;
+    color: #2FA7FD !important;
+    border-color: yellow;
+}
+
+.posicion__tabs {
+    padding: 3em 0 0 0;
+}
+.inf-sucursal h1 {
+    font-size: 3.3em;
+    color: rgb(134, 134, 134);
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+.inf-sucursal p, .inf-sucursal span{
+    font-size: 1.8em;
+    text-align: right;
+    color: rgb(134, 134, 134);
+    font-weight: 400;
+    line-height: 1.7em;
+}
+
+.form-control {
+
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #000!important;
+    background-color: #eeeeee;
+    background-image: none;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+
+}
+
+.btn-success {
+    background-color: #2FA7FD;
+    padding: .4em 8em .4em 8em;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2em;
+    border: none;
+    border-radius: .5em;
+}
+
+.btn-success:hover {
+    background-color: #116cad;
+    border: none;
+}
+footer {
+    margin-top: 4em;
+}
+footer p {
+    font-size: 1.3em;
+}
