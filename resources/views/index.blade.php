@@ -284,7 +284,7 @@
                                     <div class="col-md-6">
                                         <div class="google-maps">
                                             <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729"
+                                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7448.728681427995!2d-89.584243!3d21.018103000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x177bf39f52b5dc86!2sPlaza%20Altabrisa%20M%C3%A9rida!5e0!3m2!1ses!2smx!4v1650480424359!5m2!1ses!2smx"
                                                 width="100%" height="450" frameborder="0" style="border:0"
                                                 allowfullscreen=""></iframe>
                                         </div>
@@ -319,7 +319,7 @@
                                     <div class="col-md-6">
                                         <div class="google-maps">
                                             <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729"
+                                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7449.677247059198!2d-89.595717!3d20.999105000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8639c68e9436f711!2sDIVISAS%20SURESTE%20CENTRO%20CAMBIARIO!5e0!3m2!1ses!2smx!4v1650480534031!5m2!1ses!2smx"
                                                 width="100%" height="450" frameborder="0" style="border:0"
                                                 allowfullscreen=""></iframe>
                                         </div>
@@ -352,7 +352,7 @@
                                     <div class="col-md-6">
                                         <div class="google-maps">
                                             <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14901.732550801882!2d-89.63835037498188!3d20.975267776436198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567161bfd8ccbf%3A0xb4e105a533fd6d8!2sHotel%20Colon%20Sa%20De%20Cv!5e0!3m2!1ses!2smx!4v1650481470012!5m2!1ses!2smx"
                                                 width="100%" height="450" frameborder="0" style="border:0"
                                                 allowfullscreen=""></iframe>
                                         </div>
@@ -385,7 +385,7 @@
                                     <div class="col-md-6">
                                         <div class="google-maps">
                                             <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14902.32555726242!2d-89.62394600278989!3d20.96931955297565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5671618e23a10d%3A0x7d1ff653bd8ca868!2sDIVISAS%20SURESTE!5e0!3m2!1ses!2smx!4v1650480745649!5m2!1ses!2smx"
                                                 width="100%" height="450" frameborder="0" style="border:0"
                                                 allowfullscreen=""></iframe>
                                         </div>
@@ -417,7 +417,8 @@
                                     <div class="col-md-6">
                                         <div class="google-maps">
                                             <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8430870078764!2d-89.63507074956055!3d21.03896358592406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567599c7057651%3A0x55a2463e16d0b906!2sDivisas+Sureste+Galer%C3%ADas!5e0!3m2!1ses-419!2smx!4v1532530883729"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8017629341957!2d-89.603431185352!3d21.0005820860137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5676cc869517b9%3A0xaed3b9f95e1dfe0!2sAv%20Jose%20Diaz%20Bolio%204%2C%20M%C3%A9xico%20Oriente%2C%2097137%20M%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses!2smx!4v1650481596269!5m2!1ses!2smx
+                                                "
                                                 width="100%" height="450" frameborder="0" style="border:0"
                                                 allowfullscreen=""></iframe>
                                         </div>
