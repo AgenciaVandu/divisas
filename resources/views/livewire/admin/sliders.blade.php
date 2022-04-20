@@ -46,7 +46,8 @@
                                             @foreach ($sliders as $slider)
                                                 <tr>
                                                     <td class="px-6 py-4 whitespace-nowrap">
-                                                        <img src="{{ Storage::url($slider->url) }}" class="w-28" alt="">
+                                                        <img src="{{ Storage::url($slider->url) }}"
+                                                            class="w-28" alt="">
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap">
                                                         {{ $slider->title }}
@@ -57,11 +58,11 @@
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                         {{ $slider->updated_at }}
                                                     </td>
-                                                    {{-- <td
+                                                    <td
                                                         class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                         <a class="text-indigo-600 hover:text-indigo-900 hover:cursor-pointer"
-                                                            wire:click="edit({{ $divisa }})">Edit</a>
-                                                    </td> --}}
+                                                            wire:click="edit({{ $slider }})">Edit</a>
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
@@ -85,7 +86,7 @@
 
                     <input type="file" wire:model="file" name="file{{ rand() }}">
 
-                    @error('photo')
+                    @error('file')
                         <span class="error">{{ $message }}</span>
                     @enderror
 
@@ -108,36 +109,31 @@
         {{-- Modal para editar las imagenes --}}
 
         <x-jet-dialog-modal wire:model="edit">
-            <x-slot name="title">Editar Divisa</x-slot>
+            <x-slot name="title">Editar Slider</x-slot>
             <x-slot name="content">
                 <div class="space-y-3">
+                    @if ($fileEdit)
+                        File Preview:
+                        <img src="{{ $fileEdit->temporaryUrl() }}">
+                    @else
+                        <img src="{{ Storage::url($url) }}">
+                    @endif
+
+                    <input type="file" wire:model="fileEdit" name="fileEdit{{ rand() }}">
+
+                    @error('fileEdit')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
+
+                </div>
+                <div class="space-y-3 mt-4">
                     <div>
-                        <x-jet-label value="Nombre" />
-                        <x-jet-input wire:model="name" type="text" placeholder="Nombre de color"
-                            class="w-full bg-gray-100" disabled />
-                        <x-jet-input-error for="name" />
-                    </div>
-                    <div>
-                        <x-jet-label value="Compra" />
-                        <x-jet-input wire:model="compra" type="text" class="w-full bg-gray-100" />
-                        <x-jet-input-error for="compra" />
-                    </div>
-                    <div>
-                        <x-jet-label value="Descripción Compra" />
-                        <textarea wire:model="description_compra" class="w-full bg-gray-100 rounded-xl border-none focus:border-0"> </textarea>
-                        <x-jet-input-error for="description_compra" />
-                    </div>
-                    <div>
-                        <x-jet-label value="Venta" />
-                        <x-jet-input wire:model="venta" type="text" class="w-full bg-gray-100" />
-                        <x-jet-input-error for="venta" />
-                    </div>
-                    <div>
-                        <x-jet-label value="Descripción Venta" />
-                        <textarea wire:model="description_venta" class="w-full bg-gray-100 rounded-xl border-none focus:border-0"> </textarea>
-                        <x-jet-input-error for="description_venta" />
+                        <x-jet-label value="Titulo" />
+                        <x-jet-input wire:model="editForm.title" type="text" placeholder="Titulo" class="w-full" />
+                        <x-jet-input-error for="edit.Form" />
                     </div>
                 </div>
+
             </x-slot>
             <x-slot name="footer">
                 <x-jet-button wire:loading.attr="disabled" wire:target="update" wire:click="update">Actualizar

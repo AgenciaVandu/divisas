@@ -2,6 +2,7 @@
 
 use App\Models\Divisa;
 use App\Models\Resource;
+use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,8 @@ Route::get('/', function () {
     $video1 = Resource::find(2);
     $video2 = Resource::find(3);
     $video3 = Resource::find(4);
+    $sliders = Slider::all();
 
-    return view('index',compact('divisas','header','video1','video2','video3'));
+    return view('index',compact('divisas','header','video1','video2','video3','sliders'));
 });
 

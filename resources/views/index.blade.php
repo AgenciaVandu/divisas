@@ -59,7 +59,9 @@
                                         <th style="color: gray;" scope="row">COMPRA</th>
                                         @foreach ($divisas as $divisa)
                                             <td>
-                                                ${{ number_format($divisa->compra, 2) }} @if ($divisa->description_compra != null) <sup>{{ $divisa->id }}</sup> @endif
+                                                ${{ number_format($divisa->compra, 2) }} @if ($divisa->description_compra != null)
+                                                    <sup>{{ $divisa->id }}</sup>
+                                                @endif
                                             </td>
                                         @endforeach
                                     </tr>
@@ -67,7 +69,9 @@
                                         <th class="table-active" style="color: gray;" scope="row">VENTA</th>
                                         @foreach ($divisas as $divisa)
                                             <td class="table-active">
-                                                $ {{ number_format($divisa->venta, 2) }} @if ($divisa->description_venta != null) <sup>{{ $divisa->id }}.{{ $divisa->id }}</sup> @endif
+                                                $ {{ number_format($divisa->venta, 2) }} @if ($divisa->description_venta != null)
+                                                    <sup>{{ $divisa->id }}.{{ $divisa->id }}</sup>
+                                                @endif
                                             </td>
                                         @endforeach
                                     </tr>
@@ -99,9 +103,15 @@
                                                 <img src="/img/divisas/{{ $divisa->icon }}" width="40" alt="">
                                             </th>
                                             <td @if ($loop->iteration % 2 == 0) class="table-active mt-5" @endif>$
-                                                {{ number_format($divisa->compra, 2) }} @if ($divisa->description_compra != null) <sup>{{ $divisa->id }}</sup> @endif </td>
+                                                {{ number_format($divisa->compra, 2) }} @if ($divisa->description_compra != null)
+                                                    <sup>{{ $divisa->id }}</sup>
+                                                @endif
+                                            </td>
                                             <td @if ($loop->iteration % 2 == 0) class="table-active mt-5" @endif>$
-                                                {{ number_format($divisa->venta, 2) }} @if ($divisa->description_venta != null) <sup>{{ $divisa->id }}.{{ $divisa->id }}</sup> @endif</td>
+                                                {{ number_format($divisa->venta, 2) }} @if ($divisa->description_venta != null)
+                                                    <sup>{{ $divisa->id }}.{{ $divisa->id }}</sup>
+                                                @endif
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -114,14 +124,16 @@
                         @foreach ($divisas as $divisa)
                             @if ($divisa->description_compra != null)
                                 <span>
-                                    ({{ $divisa->id }}) {{ $divisa->description_compra }}
+                                    ({{ $divisa->id }})
+                                    {{ $divisa->description_compra }}
                                 </span>
                             @endif
                         @endforeach
                         @foreach ($divisas as $divisa)
                             @if ($divisa->description_venta != null)
                                 <span>
-                                    ({{ $divisa->id }}.{{ $divisa->id }}) {{ $divisa->description_venta }}
+                                    ({{ $divisa->id }}.{{ $divisa->id }})
+                                    {{ $divisa->description_venta }}
                                 </span>
                             @endif
                         @endforeach
@@ -186,18 +198,11 @@
                 </div>
                 <div id="carouselDivisas" class="carousel slide pt-5" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://divisasureste.com/uploads/sliders/162326437311429.jpg" class="d-block w-100"
-                                alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://divisasureste.com/uploads/sliders/162326437311429.jpg" class="d-block w-100"
-                                alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://divisasureste.com/uploads/sliders/162326437311429.jpg" class="d-block w-100"
-                                alt="...">
-                        </div>
+                        @foreach ($sliders as $slider)
+                            <div class="carousel-item @if ($loop->iteration == 1) active @endif">
+                                <img src="{{ Storage::url($slider->url) }}" class="d-block w-100" alt="...">
+                            </div>
+                        @endforeach
                     </div>
                     <button class="carousel-control-prev" type="button" data-target="#carouselDivisas" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -416,10 +421,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="google-maps">
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8017629341957!2d-89.603431185352!3d21.0005820860137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5676cc869517b9%3A0xaed3b9f95e1dfe0!2sAv%20Jose%20Diaz%20Bolio%204%2C%20M%C3%A9xico%20Oriente%2C%2097137%20M%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses!2smx!4v1650481596269!5m2!1ses!2smx
-                                                "
-                                                width="100%" height="450" frameborder="0" style="border:0"
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8017629341957!2d-89.603431185352!3d21.0005820860137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5676cc869517b9%3A0xaed3b9f95e1dfe0!2sAv%20Jose%20Diaz%20Bolio%204%2C%20M%C3%A9xico%20Oriente%2C%2097137%20M%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses!2smx!4v1650481596269!5m2!1ses!2smx
+                                                        " width="100%" height="450" frameborder="0" style="border:0"
                                                 allowfullscreen=""></iframe>
                                         </div>
                                     </div>
