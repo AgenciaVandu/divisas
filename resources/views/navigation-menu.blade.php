@@ -18,6 +18,12 @@
                     <x-jet-nav-link href="{{ route('video') }}" :active="request()->routeIs('video')">
                         {{ __('Video') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('sliders') }}" :active="request()->routeIs('sliders')">
+                        {{ __('Sliders') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('videos') }}" :active="request()->routeIs('videos')">
+                        {{ __('Videos') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
@@ -140,8 +146,17 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-jet-responsive-nav-link href="{{ route('divisas') }}" :active="request()->routeIs('divisas')">
+                {{ __('Divisas') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('video') }}" :active="request()->routeIs('video')">
+                {{ __('Video') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('sliders') }}" :active="request()->routeIs('sliders')">
+                {{ __('Sliders') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('videos') }}" :active="request()->routeIs('videos')">
+                {{ __('Videos') }}
             </x-jet-responsive-nav-link>
         </div>
 

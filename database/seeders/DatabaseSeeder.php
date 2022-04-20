@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('marencos6359:D'),
         ]);
         $this->call(DivisaSeeder::class);
+        $this->call(ResourceSeeder::class);
+        $this->call(SliderSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

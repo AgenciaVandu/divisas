@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <header>
-            <video type="mp4" src="https://divisasureste.com/uploads/videos/164857799416255.mp4" autoplay loop muted>
+            <video type="mp4" src="{{ Storage::url($header->url) }}" autoplay loop muted>
             </video>
             <figure>
                 <img src="/img/linea-paises.png" class="w-100" alt="">
@@ -59,7 +59,7 @@
                                         <th style="color: gray;" scope="row">COMPRA</th>
                                         @foreach ($divisas as $divisa)
                                             <td>
-                                                    ${{ number_format($divisa->compra, 2) }}
+                                                ${{ number_format($divisa->compra, 2) }} @if ($divisa->description_compra != null) <sup>{{ $divisa->id }}</sup> @endif
                                             </td>
                                         @endforeach
                                     </tr>
@@ -67,7 +67,7 @@
                                         <th class="table-active" style="color: gray;" scope="row">VENTA</th>
                                         @foreach ($divisas as $divisa)
                                             <td class="table-active">
-                                                $  {{ number_format($divisa->venta,2) }}
+                                                $ {{ number_format($divisa->venta, 2) }} @if ($divisa->description_venta != null) <sup>{{ $divisa->id }}.{{ $divisa->id }}</sup> @endif
                                             </td>
                                         @endforeach
                                     </tr>
@@ -92,62 +92,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th class="table-active" style="color: gray;" scope="row">
-                                            <img src="/img/divisas/ico2.png" width="40" alt="">
-                                        </th>
-                                        <td class="table-active mt-5">Dólares</td>
-                                        <td class="table-active mt-5">Dólares</td>
-                                    </tr>
-                                    <tr>
-                                        <th style="color: gray;" scope="row">
-                                            <img src="/img/divisas/ico3.png" width="40" alt="">
-                                        </th>
-                                        <td>Jacob</td>
-                                        <td>Jacob</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-active" style="color: gray;" scope="row">
-                                            <img src="/img/divisas/ico4.png" width="40" alt="">
-                                        </th>
-                                        <td class="table-active">Larry</td>
-                                        <td class="table-active">Larry</td>
-                                    </tr>
-                                    <tr>
-                                        <th style="color: gray;" scope="row">
-                                            <img src="/img/divisas/ico5.png" width="40" alt="">
-                                        </th>
-                                        <td class="mt-4">Jacob</td>
-                                        <td class="mt-4">Jacob</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-active" style="color: gray;" scope="row">
-                                            <img src="/img/divisas/ico6.png" width="40" alt="">
-                                        </th>
-                                        <td class="table-active">Larry</td>
-                                        <td class="table-active">Larry</td>
-                                    </tr>
-                                    <tr>
-                                        <th style="color: gray;" scope="row">
-                                            <img src="/img/divisas/ico7.png" width="40" alt="">
-                                        </th>
-                                        <td class="mt-4">Jacob</td>
-                                        <td class="mt-4">Jacob</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-active" style="color: gray;" scope="row">
-                                            <img src="/img/divisas/ico9.png" width="40" alt="">
-                                        </th>
-                                        <td class="table-active">Larry</td>
-                                        <td class="table-active">Larry</td>
-                                    </tr>
-                                    <tr>
-                                        <th style="color: gray;" scope="row">
-                                            <img src="/img/divisas/ico10.png" width="40" alt="">
-                                        </th>
-                                        <td class="mt-4">Jacob</td>
-                                        <td class="mt-4">Jacob</td>
-                                    </tr>
+                                    @foreach ($divisas as $divisa)
+                                        <tr>
+                                            <th @if ($loop->iteration % 2 == 0) class="table-active" @endif
+                                                style="color: gray;" scope="row">
+                                                <img src="/img/divisas/{{ $divisa->icon }}" width="40" alt="">
+                                            </th>
+                                            <td @if ($loop->iteration % 2 == 0) class="table-active mt-5" @endif>$
+                                                {{ number_format($divisa->compra, 2) }} @if ($divisa->description_compra != null) <sup>{{ $divisa->id }}</sup> @endif </td>
+                                            <td @if ($loop->iteration % 2 == 0) class="table-active mt-5" @endif>$
+                                                {{ number_format($divisa->venta, 2) }} @if ($divisa->description_venta != null) <sup>{{ $divisa->id }}.{{ $divisa->id }}</sup> @endif</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -155,10 +111,20 @@
                 </div>
                 <div class="pt-3 text-center">
                     <small>* Tipos de cambios informativos, sujetos a variación sin previo aviso. <br>
-                        <span>
-                            (1) NO APLICA PARA BILLETES DE 500 EUROS (2) APLICA EN DENOMINACIONES DE: 1,5,10,20, BILLETES DE
-                            50 Y 100 FAVOR DE CONSULTAR COTIZACIÓN
-                        </span>
+                        @foreach ($divisas as $divisa)
+                            @if ($divisa->description_compra != null)
+                                <span>
+                                    ({{ $divisa->id }}) {{ $divisa->description_compra }}
+                                </span>
+                            @endif
+                        @endforeach
+                        @foreach ($divisas as $divisa)
+                            @if ($divisa->description_venta != null)
+                                <span>
+                                    ({{ $divisa->id }}.{{ $divisa->id }}) {{ $divisa->description_venta }}
+                                </span>
+                            @endif
+                        @endforeach
                     </small>
                 </div>
             </div>
@@ -204,17 +170,17 @@
                 <div class="row pt-5">
                     <div class="col-4">
                         <video autoplay loop muted style="width: 100%; height: auto; border-radius: 15px;">
-                            <source type="video/mp4" src="https://divisasureste.com/uploads/videos/16232575661752.mp4">
+                            <source type="video/mp4" src="{{ Storage::url($video1->url) }}">
                         </video>
                     </div>
                     <div class="col-4">
                         <video autoplay loop muted style="width: 100%; height: auto; border-radius: 15px;">
-                            <source type="video/mp4" src="https://divisasureste.com/uploads/videos/16232575661752.mp4">
+                            <source type="video/mp4" src="{{ Storage::url($video2->url) }}">
                         </video>
                     </div>
                     <div class="col-4">
                         <video autoplay loop muted style="width: 100%; height: auto; border-radius: 15px;">
-                            <source type="video/mp4" src="https://divisasureste.com/uploads/videos/16232575661752.mp4">
+                            <source type="video/mp4" src="{{ Storage::url($video3->url) }}">
                         </video>
                     </div>
                 </div>

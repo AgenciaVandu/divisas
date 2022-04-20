@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Divisa;
+use App\Models\Resource;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $divisas = Divisa::all();
-    return view('index',compact('divisas'));
+    $header = Resource::find(1);
+    $video1 = Resource::find(2);
+    $video2 = Resource::find(3);
+    $video3 = Resource::find(4);
+
+    return view('index',compact('divisas','header','video1','video2','video3'));
 });
 
