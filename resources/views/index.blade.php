@@ -141,6 +141,7 @@
                 </div>
             </div>
         </section>
+       <div class="d-none d-sm-none d-md-none d-lg-block">
         <section id="servicios" class="servicios pb-4">
             <div class=" titular pt-3 pb-3">
                 <h1>¿POR QUÉ SOMOS TU MEJOR OPCIÓN?</h1>
@@ -177,20 +178,21 @@
                 </div>
             </div>
         </section>
+       </div>
         <section class="banners mt-2">
             <div class="container">
                 <div class="row pt-5">
-                    <div class="col-4">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <video autoplay loop muted style="width: 100%; height: auto; border-radius: 15px;">
                             <source type="video/mp4" src="{{ Storage::url($video1->url) }}">
                         </video>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <video autoplay loop muted style="width: 100%; height: auto; border-radius: 15px;">
                             <source type="video/mp4" src="{{ Storage::url($video2->url) }}">
                         </video>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
                         <video autoplay loop muted style="width: 100%; height: auto; border-radius: 15px;">
                             <source type="video/mp4" src="{{ Storage::url($video3->url) }}">
                         </video>
