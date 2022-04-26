@@ -53,9 +53,6 @@
                                         <th scope="col">
                                             <img src="/img/divisas/ico10.png" width="50" alt="">
                                         </th>
-                                        <th scope="col">
-                                            <img src="/img/divisas/ico9.png" width="50" alt="">
-                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
