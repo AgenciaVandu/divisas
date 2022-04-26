@@ -461,32 +461,49 @@
                         <h1 class="titulares text-center">CONTÁCTANOS</h1> <br>
                     </div>
                     <div class="col-lg-12 col-lg-offset-2 p-3">
-                        <form name="sentMessage" id="contactForm" novalidate="">
+                        <form action="{{ route('contacto') }}" method="POST" name="sentMessage" id="contactForm" novalidate="">
+                            @csrf
+                            @method('POST')
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 col-md-6  controls">
 
-                                    <input type="text" class="form-control" placeholder="NOMBRE" id="name" required=""
+                                    <input type="text" class="form-control" placeholder="NOMBRE" id="name" name="name" required=""
                                         data-validation-required-message="Please enter your name." style="color: #f2f2f2;">
                                     <p class="help-block text-danger"></p> <br>
 
-                                    <input type="email" class="form-control" placeholder="CORREO" id="email" required=""
+                                    <input type="email" class="form-control" placeholder="CORREO" id="email" required="" name="email"
                                         data-validation-required-message="Please enter your email address."
                                         style="color: #f2f2f2;">
                                     <p class="help-block text-danger"></p> <br>
 
-                                    <input type="tel" class="form-control" placeholder="TELÉFONO" id="phone" required=""
+                                    <input type="tel" class="form-control" placeholder="TELÉFONO" id="phone" required="" name="phone"
                                         data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
 
                                 </div>
 
                                 <div class="form-group col-md-6  controls">
-                                    <textarea rows="7" class="form-control" placeholder="ASUNTO" id="message" required=""
+                                    <textarea rows="7" class="form-control" placeholder="ASUNTO" id="message" required="" name="message"
                                         data-validation-required-message="Please enter a message."
                                         style="color: #f2f2f2;"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
+                            <div>
+                                <input type="checkbox" name="policy" id="policy">
+                                <label for="policy" class="text-md">Acepto que DivisasSureste use mis datos únicamente para fines contacto y envío de información relacionada con esta solicitud
+                                    NOTA: Sus datos están protegidos de acuerdo a la Ley de Protección de de Datos Personales.</label>
+                            </div>
+                            {{-- Errores laravel --}}
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success  btn-enviar">Enviar</button>
                             </div>
