@@ -7,6 +7,13 @@
     <title>Email de contacto</title>
 </head>
 <body>
-
+    <h1>Correo de contacto</h1>
+        {{ $name }}
+        <br>
+        {{ $email }}
+        <br>
+        {{ $phone }}
+        <br>
+        {{ $asunto }}
 </body>
 </html>

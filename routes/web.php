@@ -30,16 +30,19 @@ Route::get('/', function () {
 });
 
 Route::post('/contacto', function(Request $request){
+
     $request->validate([
         'name' => 'required',
-        'email' => 'required|email',
+        'email' => 'required',
         'phone' => 'required',
-        'message' => 'required',
+        'asunto' => 'required',
         'policy' => 'required',
     ]);
 
     if ($request->policy == 'on') {
         Mail::to('director@divisasureste.com')->send(new Contact($request));
     }
+
+    return back()->with('success', 'Mensaje enviado correctamente');
 })->name('contacto');
 

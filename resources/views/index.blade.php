@@ -1,5 +1,15 @@
 @extends('layouts.divisas')
 @section('content')
+{{-- alerta de mensaje enviado --}}
+@if(session('success'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{session('success')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
+
     <main>
         <header>
             <video type="mp4" src="{{ Storage::url($header->url) }}" autoplay loop muted>
@@ -483,7 +493,7 @@
                                 </div>
 
                                 <div class="form-group col-md-6  controls">
-                                    <textarea rows="7" class="form-control" placeholder="ASUNTO" id="message" required="" name="message"
+                                    <textarea rows="7" class="form-control" placeholder="ASUNTO" id="message" required="" name="asunto"
                                         data-validation-required-message="Please enter a message."
                                         style="color: #f2f2f2;"></textarea>
                                     <p class="help-block text-danger"></p>
