@@ -20,13 +20,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $divisas = Divisa::all();
+    $divisas = Divisa::where('id','!=',8)->get();
+    $dolar_especial = Divisa::find(8);
     $header = Resource::find(1);
     $video1 = Resource::find(2);
     $video2 = Resource::find(3);
     $video3 = Resource::find(4);
     $sliders = Slider::all();
-    return view('index',compact('divisas','header','video1','video2','video3','sliders'));
+    return view('index',compact('divisas','dolar_especial','header','video1','video2','video3','sliders'));
 });
 
 Route::post('/contacto', function(Request $request){
@@ -45,4 +46,3 @@ Route::post('/contacto', function(Request $request){
 
     return back()->with('success', 'Mensaje enviado correctamente');
 })->name('contacto');
-

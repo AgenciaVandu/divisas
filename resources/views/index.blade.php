@@ -1,14 +1,14 @@
 @extends('layouts.divisas')
 @section('content')
-{{-- alerta de mensaje enviado --}}
-@if(session('success'))
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-    {{session('success')}}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
-@endif
+    {{-- alerta de mensaje enviado --}}
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
 
     <main>
         <header>
@@ -126,25 +126,26 @@
                         </div>
                     </div>
                     <div class="card mt-4 mb-4">
-                        <div class="titular-dolar text-center" >
+                        <div class="titular-dolar text-center">
                             <h1>DÓLAR ESPECIAL</h1>
                             <div class="row mb-3">
                                 <div class="col-lg col-md col-sm-12">
                                     <img src="/img/divisas/ico2.png" width="100" alt="">
                                 </div>
                                 <div class="col-lg col-md col-sm-12 m-auto">
-                                   <h2 class="titular-compra"> Compra <span>$18.80</span></h2>
+                                    <h2 class="titular-compra"> Compra <span>${{  number_format($dolar_especial->compra,2) }}</span></h2>
                                 </div>
                                 <div class="col-lg col-md col-sm-12 m-auto">
-                                    <h2 class="titular-compra"> Venta <span>$19.10</span></h2>
+                                    <h2 class="titular-compra"> Venta <span>${{  number_format($dolar_especial->venta,2) }}</span></h2>
                                 </div>
                             </div>
-                            <small class="text-center">Aplica sólo en billetes de 1, 5, 10, 20. Sujeto a disponibilidad únicamente en sucursales: Plaza Fiesta y Colonia México.</small>
+                            <small class="text-center">Aplica sólo en billetes de 1, 5, 10, 20. Sujeto a disponibilidad
+                                únicamente en sucursales: Plaza Fiesta y Colonia México.</small>
                         </div>
                     </div>
                 </div>
                 <div class="pt-3 text-center">
-                    <small>* Tipos de cambios informativos, sujetos a variación sin previo aviso. Sujeto a variación sin previo aviso. Nos reservamos el derecho de compra y/o venta de cualquier divisa. <br>
+                    <small>*{{ $dolar_especial->description_compra }} {{ $dolar_especial->description_venta }}
                         @foreach ($divisas as $divisa)
                             @if ($divisa->description_compra != null)
                                 <span>
@@ -165,44 +166,49 @@
                 </div>
             </div>
         </section>
-       <div class="d-none d-sm-none d-md-none d-lg-block">
-        <section id="servicios" class="servicios pb-4">
-            <div class=" titular pt-3 pb-3">
-                <h1>¿POR QUÉ SOMOS TU MEJOR OPCIÓN?</h1>
-            </div>
-            <div class="servicios-lista pt-5 pb-5">
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                        <figure>
-                            <img src="/img/mensaje.png" class="img-fluid" alt="">
-                        </figure>
-                        <h1>FÁCIL</h1>
-                        <p>Sabemos que hacer el cambio de moneda a veces puede ser tedioso, por eso siempre ponemos a tu
-                            disposición la información que necesites para realizarlo ¿No sabes cuánto recibirás al día de
-                            hoy? envíanos un mensaje a nuestras redes sociales y te respondemos en minutos.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                        <figure>
-                            <img src="/img/rapido.png" class="img-fluid" alt="">
-                        </figure>
-                        <h1>RÁPIDO</h1>
-                        <p>Tu tiempo y satisfacción es lo más valioso para nosotros, te garantizamos velocidad de respuesta,
-                            así como también atención óptima, para que tu experiencia al visitarnos sea lo mejor de tu día.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                        <figure>
-                            <img src="/img/candado.png" class="img-fluid" alt="">
-                        </figure>
-                        <h1>SEGURO</h1>
-                        <p>La seguridad es algo primordial, por eso estamos comprometidos con salvaguardar la veracidad de
-                            cada movimiento. Recuerda que contamos con todas las medidas de seguridad requeridas y todos los
-                            permisos emitodos por la ley.</p>
+        <div class="d-none d-sm-none d-md-none d-lg-block">
+            <section id="servicios" class="servicios pb-4">
+                <div class=" titular pt-3 pb-3">
+                    <h1>¿POR QUÉ SOMOS TU MEJOR OPCIÓN?</h1>
+                </div>
+                <div class="servicios-lista pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                            <figure>
+                                <img src="/img/mensaje.png" class="img-fluid" alt="">
+                            </figure>
+                            <h1>FÁCIL</h1>
+                            <p>Sabemos que hacer el cambio de moneda a veces puede ser tedioso, por eso siempre ponemos a tu
+                                disposición la información que necesites para realizarlo ¿No sabes cuánto recibirás al día
+                                de
+                                hoy? envíanos un mensaje a nuestras redes sociales y te respondemos en minutos.</p>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                            <figure>
+                                <img src="/img/rapido.png" class="img-fluid" alt="">
+                            </figure>
+                            <h1>RÁPIDO</h1>
+                            <p>Tu tiempo y satisfacción es lo más valioso para nosotros, te garantizamos velocidad de
+                                respuesta,
+                                así como también atención óptima, para que tu experiencia al visitarnos sea lo mejor de tu
+                                día.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                            <figure>
+                                <img src="/img/candado.png" class="img-fluid" alt="">
+                            </figure>
+                            <h1>SEGURO</h1>
+                            <p>La seguridad es algo primordial, por eso estamos comprometidos con salvaguardar la veracidad
+                                de
+                                cada movimiento. Recuerda que contamos con todas las medidas de seguridad requeridas y todos
+                                los
+                                permisos emitodos por la ley.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-       </div>
+            </section>
+        </div>
         <section class="banners mt-2">
             <div class="container">
                 <div class="row pt-5">
@@ -230,11 +236,13 @@
                             </div>
                         @endforeach
                     </div>
-                    <button class="carousel-control-prev" type="button" data-target="#carouselDivisas" data-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-target="#carouselDivisas"
+                        data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-target="#carouselDivisas" data-slide="next">
+                    <button class="carousel-control-next" type="button" data-target="#carouselDivisas"
+                        data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </button>
@@ -255,7 +263,8 @@
                             </li>
                             <li class="nav-item mt-2" role="presentation">
                                 <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-altabrisa"
-                                    role="tab" aria-controls="pills-profile" aria-selected="false">Plaza Altabrisa</a>
+                                    role="tab" aria-controls="pills-profile" aria-selected="false">Plaza
+                                    Altabrisa</a>
                             </li>
                             <li class="nav-item mt-2" role="presentation">
                                 <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-fiesta"
@@ -358,7 +367,8 @@
                                     <div class="col-md-6 inf-sucursal m-auto">
                                         <h1 class="text-right pt-2">PLAZA FIESTA</h1> <br>
                                         <div class="text-right">
-                                            <p style="color:rgb(100, 100, 100);">PLAZA FIESTA, LOCAL 54. CALLE 6 Nº 400 X 21
+                                            <p style="color:rgb(100, 100, 100);">PLAZA FIESTA, LOCAL 54. CALLE 6 Nº 400 X
+                                                21
                                                 COL. DÍAZ ORDAZ, MÉRIDA, YUCATÁN. C.P. 97130.</p>
                                             <p>
                                             <div class="row pt-3">
@@ -378,7 +388,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-colon" role="tabpanel" aria-labelledby="pills-colon-tab">
+                            <div class="tab-pane fade" id="pills-colon" role="tabpanel"
+                                aria-labelledby="pills-colon-tab">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="google-maps">
@@ -424,7 +435,8 @@
                                     <div class="col-md-6 inf-sucursal m-auto">
                                         <h1 class="text-right pt-2">CENTRO 59</h1> <br>
                                         <div class="text-right">
-                                            <p style="color:rgb(100, 100, 100);">CALLE 59 NO. 509 DEPTO 1 ENTRE 60 Y 62 COL.
+                                            <p style="color:rgb(100, 100, 100);">CALLE 59 NO. 509 DEPTO 1 ENTRE 60 Y 62
+                                                COL.
                                                 CENTRO C.P. 97000 MÉRIDA, YUCATÁN, MÉXICO</p>
                                             <p>
                                             <div class="row">
@@ -447,8 +459,10 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="google-maps">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8017629341957!2d-89.603431185352!3d21.0005820860137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5676cc869517b9%3A0xaed3b9f95e1dfe0!2sAv%20Jose%20Diaz%20Bolio%204%2C%20M%C3%A9xico%20Oriente%2C%2097137%20M%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses!2smx!4v1650481596269!5m2!1ses!2smx
-                                                        " width="100%" height="450" frameborder="0" style="border:0"
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8017629341957!2d-89.603431185352!3d21.0005820860137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5676cc869517b9%3A0xaed3b9f95e1dfe0!2sAv%20Jose%20Diaz%20Bolio%204%2C%20M%C3%A9xico%20Oriente%2C%2097137%20M%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses!2smx!4v1650481596269!5m2!1ses!2smx
+                                                        "
+                                                width="100%" height="450" frameborder="0" style="border:0"
                                                 allowfullscreen=""></iframe>
                                         </div>
                                     </div>
@@ -485,22 +499,27 @@
                         <h1 class="titulares text-center">CONTÁCTANOS</h1> <br>
                     </div>
                     <div class="col-lg-12 col-lg-offset-2 p-3">
-                        <form action="{{ route('contacto') }}" method="POST" name="sentMessage" id="contactForm" novalidate="">
+                        <form action="{{ route('contacto') }}" method="POST" name="sentMessage" id="contactForm"
+                            novalidate="">
                             @csrf
                             @method('POST')
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 col-md-6  controls">
 
-                                    <input type="text" class="form-control" placeholder="NOMBRE" id="name" name="name" required=""
-                                        data-validation-required-message="Please enter your name." style="color: #f2f2f2;">
+                                    <input type="text" class="form-control" placeholder="NOMBRE" id="name"
+                                        name="name" required=""
+                                        data-validation-required-message="Please enter your name."
+                                        style="color: #f2f2f2;">
                                     <p class="help-block text-danger"></p> <br>
 
-                                    <input type="email" class="form-control" placeholder="CORREO" id="email" required="" name="email"
+                                    <input type="email" class="form-control" placeholder="CORREO" id="email"
+                                        required="" name="email"
                                         data-validation-required-message="Please enter your email address."
                                         style="color: #f2f2f2;">
                                     <p class="help-block text-danger"></p> <br>
 
-                                    <input type="tel" class="form-control" placeholder="TELÉFONO" id="phone" required="" name="phone"
+                                    <input type="tel" class="form-control" placeholder="TELÉFONO" id="phone"
+                                        required="" name="phone"
                                         data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
 
@@ -508,25 +527,26 @@
 
                                 <div class="form-group col-md-6  controls">
                                     <textarea rows="7" class="form-control" placeholder="ASUNTO" id="message" required="" name="asunto"
-                                        data-validation-required-message="Please enter a message."
-                                        style="color: #f2f2f2;"></textarea>
+                                        data-validation-required-message="Please enter a message." style="color: #f2f2f2;"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div>
                                 <input type="checkbox" name="policy" id="policy">
-                                <label for="policy" class="text-md">Acepto que DivisasSureste use mis datos únicamente para fines contacto y envío de información relacionada con esta solicitud
-                                    NOTA: Sus datos están protegidos de acuerdo a la Ley de Protección de de Datos Personales.</label>
+                                <label for="policy" class="text-md">Acepto que DivisasSureste use mis datos únicamente
+                                    para fines contacto y envío de información relacionada con esta solicitud
+                                    NOTA: Sus datos están protegidos de acuerdo a la Ley de Protección de de Datos
+                                    Personales.</label>
                             </div>
                             {{-- Errores laravel --}}
                             @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             @endif
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success  btn-enviar">Enviar</button>
