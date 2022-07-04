@@ -125,9 +125,26 @@
                             </table>
                         </div>
                     </div>
+                    <div class="card mt-4 mb-4">
+                        <div class="titular-dolar text-center" >
+                            <h1>DÓLAR ESPECIAL</h1>
+                            <div class="row mb-3">
+                                <div class="col-lg col-md col-sm-12">
+                                    <img src="/img/divisas/ico2.png" width="100" alt="">
+                                </div>
+                                <div class="col-lg col-md col-sm-12 m-auto">
+                                   <h2 class="titular-compra"> Compra <span>$18.80</span></h2>
+                                </div>
+                                <div class="col-lg col-md col-sm-12 m-auto">
+                                    <h2 class="titular-compra"> Venta <span>$19.10</span></h2>
+                                </div>
+                            </div>
+                            <small class="text-center">Aplica sólo en billetes de 1, 5, 10, 20. Sujeto a disponibilidad únicamente en sucursales: Plaza Fiesta y Colonia México.</small>
+                        </div>
+                    </div>
                 </div>
                 <div class="pt-3 text-center">
-                    <small>* Tipos de cambios informativos, sujetos a variación sin previo aviso. <br>
+                    <small>* Tipos de cambios informativos, sujetos a variación sin previo aviso. Sujeto a variación sin previo aviso. Nos reservamos el derecho de compra y/o venta de cualquier divisa. <br>
                         @foreach ($divisas as $divisa)
                             @if ($divisa->description_compra != null)
                                 <span>
