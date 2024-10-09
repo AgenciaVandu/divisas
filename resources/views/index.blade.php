@@ -20,10 +20,27 @@
         </header>
         <section id="tipo-de-cambio" class="tipo-de-cambio pt-5 pb-5">
             <div class="container">
-                <div class="titular">
-                    <h1>DIVISAS Y MONEDAS</h1>
-                </div>
                 <div class="divisas">
+                    <div class="card mt-4 mb-4">
+                        <div class="titular-dolar text-center">
+                            <h1>DÓLAR ESPECIAL</h1>
+                            <div class="row mb-3">
+                                <div class="col-lg col-md col-sm-12">
+                                    <img src="/img/divisas/ico2.png" width="100" alt="">
+                                </div>
+                                <div class="col-lg col-md col-sm-12 m-auto">
+                                    <h2 class="titular-compra"> Compra <span>${{  number_format($dolar_especial->compra,2) }}</span></h2>
+                                </div>
+                                <div class="col-lg col-md col-sm-12 m-auto">
+                                    <h2 class="titular-compra"> Venta <span>${{  number_format($dolar_especial->venta,2) }}</span></h2>
+                                </div>
+                            </div>
+                            <small class="text-center">Aplica sólo en billetes de 1, 5, 10, 20. Sujeto a disponibilidad únicamente en sucursales: Plaza Fiesta y Colonia México.</small>
+                        </div>
+                    </div>
+                    <div class="titular">
+                        <h1>DIVISAS Y MONEDAS</h1>
+                    </div>
                     <div class="d-none d-sm-none d-md-block d-lg-block">
                         <div class="card">
                             <table class="table table-borderless text-center">
@@ -127,25 +144,11 @@
                             <small class="text-center">Tipo de Cambio informativo, sujeto a variación sin previo aviso. Nos Reservamos el Derecho de Compra y/o Venta de Cualquier Divisa.</small>
                         </div>
                     </div>
-                    <div class="card mt-4 mb-4">
-                        <div class="titular-dolar text-center">
-                            <h1>DÓLAR ESPECIAL</h1>
-                            <div class="row mb-3">
-                                <div class="col-lg col-md col-sm-12">
-                                    <img src="/img/divisas/ico2.png" width="100" alt="">
-                                </div>
-                                <div class="col-lg col-md col-sm-12 m-auto">
-                                    <h2 class="titular-compra"> Compra <span>${{  number_format($dolar_especial->compra,2) }}</span></h2>
-                                </div>
-                                <div class="col-lg col-md col-sm-12 m-auto">
-                                    <h2 class="titular-compra"> Venta <span>${{  number_format($dolar_especial->venta,2) }}</span></h2>
-                                </div>
-                            </div>
-                            <small class="text-center">Aplica sólo en billetes de 1, 5, 10, 20. Sujeto a disponibilidad únicamente en sucursales: Plaza Fiesta y Colonia México.</small>
-                        </div>
-                    </div>
+
                 </div>
+
                 <div class="pt-3 text-center">
+
                     <small>*{{ $dolar_especial->description_compra }} {{ $dolar_especial->description_venta }}
                         @foreach ($divisas as $divisa)
                             @if ($divisa->description_compra != null)
@@ -170,43 +173,10 @@
         <div class="d-none d-sm-none d-md-none d-lg-block">
             <section id="servicios" class="servicios pb-4">
                 <div class=" titular pt-3 pb-3">
-                    <h1>¿POR QUÉ SOMOS TU MEJOR OPCIÓN?</h1>
+                    <h1 style="text-transform: uppercase;">Somos tu mejor opción en el cambio de divisas</h1>
                 </div>
                 <div class="servicios-lista pt-5 pb-5">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                            <figure>
-                                <img src="/img/mensaje.png" class="img-fluid" alt="">
-                            </figure>
-                            <h1>FÁCIL</h1>
-                            <p>Sabemos que hacer el cambio de moneda a veces puede ser tedioso, por eso siempre ponemos a tu
-                                disposición la información que necesites para realizarlo ¿No sabes cuánto recibirás al día
-                                de
-                                hoy? envíanos un mensaje a nuestras redes sociales y te respondemos en minutos.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                            <figure>
-                                <img src="/img/rapido.png" class="img-fluid" alt="">
-                            </figure>
-                            <h1>RÁPIDO</h1>
-                            <p>Tu tiempo y satisfacción es lo más valioso para nosotros, te garantizamos velocidad de
-                                respuesta,
-                                así como también atención óptima, para que tu experiencia al visitarnos sea lo mejor de tu
-                                día.
-                            </p>
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                            <figure>
-                                <img src="/img/candado.png" class="img-fluid" alt="">
-                            </figure>
-                            <h1>SEGURO</h1>
-                            <p>La seguridad es algo primordial, por eso estamos comprometidos con salvaguardar la veracidad
-                                de
-                                cada movimiento. Recuerda que contamos con todas las medidas de seguridad requeridas y todos
-                                los
-                                permisos emitodos por la ley.</p>
-                        </div>
-                    </div>
+                   <h1 class="text-center"> <span>Whatsapp:</span> 999 172 9399</h1>
                 </div>
             </section>
         </div>
@@ -271,10 +241,7 @@
                                 <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-fiesta"
                                     role="tab" aria-controls="pills-contact" aria-selected="false">Plaza Fiesta</a>
                             </li>
-                            <li class="nav-item mt-2" role="presentation">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-colon"
-                                    role="tab" aria-controls="pills-contact" aria-selected="false">Centro Colón</a>
-                            </li>
+
                             <li class="nav-item mt-2" role="presentation">
                                 <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-centro"
                                     role="tab" aria-controls="pills-contact" aria-selected="false">Centro 59</a>
@@ -309,8 +276,8 @@
                                                     <span class="izquierda horario">HORARIO:</span>
                                                 </div>
                                                 <div class="col-md-8 col-sm-12 ">
-                                                    <span class="derecha tele">(999) 218 3602</span> <br>
-                                                    <span class="derecha tele">TODOS LOS DÍAS DE 10:00 AM A 9:00
+                                                    <span class="derecha tele">(999) 534 1475</span> <br>
+                                                    <span class="derecha tele">TODOS LOS DÍAS DE 11:00 AM A 9:00
                                                         PM</span>
                                                 </div>
                                             </div>
@@ -345,7 +312,7 @@
                                                 <div class="col-md-8 col-sm-12 ">
                                                     <span class="derecha tele">(999) 167 9357</span> <br>
                                                     <span class="derecha tele">(999) 172 9399</span> <br>
-                                                    <span class="derecha tele">TODOS LOS DÍAS DE 10:00 AM A 9:00
+                                                    <span class="derecha tele">TODOS LOS DÍAS DE 11:00 AM A 9:00
                                                         PM</span>
                                                 </div>
                                             </div>
@@ -380,8 +347,8 @@
                                                 </div>
                                                 <div class="col-md-8 col-sm-12 ">
                                                     <span class="derecha tele">(999) 943 2249</span> <br>
-                                                    <span class="derecha tele">(999) 172 9399</span> <br>
-                                                    <span class="derecha tele">TODOS LOS DÍAS DE 9:30 AM A 6:00 PM</span>
+                                                    <span class="derecha tele">(999) 172 9399</span><br>
+                                                    <span class="derecha tele">L - V DE 9:00 AM A 6:00 PM <br> S. DE 9:00 AM A 2:00 PM D. CERRADO</span>
                                                 </div>
                                             </div>
                                             </p>
@@ -479,8 +446,8 @@
                                                     <span class="izquierda horario">HORARIO:</span>
                                                 </div>
                                                 <div class="col-md-8 col-sm-12 ">
-                                                    <span class="derecha tele">(999) 374 1963</span> <br>
-                                                    <span class="derecha tele">TODOS LOS DÍAS DE 9:30 AM A 7:30 PM</span>
+                                                    <span class="derecha tele">(999) 406 9041</span> <br>
+                                                    <span class="derecha tele">L - V DE 9:00 AM A 6:00 PM <br> S. DE 9:00 AM A 2:00 PM D. CERRADO</span>
                                                 </div>
                                             </div>
                                             </p>
