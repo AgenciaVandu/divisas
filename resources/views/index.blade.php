@@ -32,7 +32,7 @@
                                     <h2 class="titular-compra"> Compra <span>${{  number_format($dolar_especial->compra,2) }}</span></h2>
                                 </div>
                                 <div class="col-lg col-md col-sm-12 m-auto">
-                                    <h2 class="titular-compra"> Venta <span>${{  number_format($dolar_especial->venta,2) }}</span></h2>
+                                    <h2 class="titular-compra"> Venta <span>${{  number_format($dolar_especial->venta,2) }}*</span></h2>
                                 </div>
                             </div>
                             <small class="text-center">*Aplica sólo en billetes de 1, 5, 10, 20. Sujeto a disponibilidad, únicamente en sucursales: Plaza Fiesta y Colonia México.</small>
