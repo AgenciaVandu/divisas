@@ -74,6 +74,12 @@ class Sliders extends Component
 
     }
 
+
+    public function delete(Slider $slider){
+        $slider->delete();
+        $this->sliders = Slider::all();
+    }
+
     public function render()
     {
         return view('livewire.admin.sliders');

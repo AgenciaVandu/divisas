@@ -46,8 +46,8 @@
                                             @foreach ($sliders as $slider)
                                                 <tr>
                                                     <td class="px-6 py-4 whitespace-nowrap">
-                                                        <img src="{{ Storage::url($slider->url) }}"
-                                                            class="w-28" alt="">
+                                                        <img src="{{ Storage::url($slider->url) }}" class="w-28"
+                                                            alt="">
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap">
                                                         {{ $slider->title }}
@@ -62,6 +62,9 @@
                                                         class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                         <a class="text-indigo-600 hover:text-indigo-900 hover:cursor-pointer"
                                                             wire:click="edit({{ $slider }})">Edit</a>
+                                                        <span>/</span>
+                                                        <a class="text-red-600 hover:text-indigo-900 hover:cursor-pointer"
+                                                            wire:click="delete({{ $slider }})">Eliminar</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
